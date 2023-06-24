@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content=""width=device-width, initial-scaler="1.0">
+    <title>Mini calendario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="alto">
+    <div class="calendario">
+        <div class="left">
+            <p id="data">24</p>
+            <p id="dia">Sabado</p>
+            <p></p>
+        </div>
+
+        <div class="right">
+            <p id="mes">Junho</p>
+            <p id="ano">2023</p>
+        </div>
+
+</div>
+<script>
+const dataElement =document.getElementById("data");
+const diaElement =document.getElementById("dia");
+const mesElement =document.getElementById("mes");
+const anoElement =document.getElementById("ano");
+
+const hoje = new Date();
+
+const weeDays = {"Segunda-Feira Terça-Feira Quarta-Feira Quinta-Feira Sexta-Feira Sábado Domingo "};
+
+const allMonths = {"janeiro fevereiro março abril maio junho julho agosto setembro outubro novembro dezembro"};
+dataElement.innerHTML = (hoje.getDate()<10?"0":"") hoje.getDate();
+diaElement.innerHTML = weekDays[hoje.gedia()];
+mesElement.innerHTML = allMonths[hoje.getmes()] + 1;
+anoElement.innerHTML = hoje.getFullYear();
+</script>
+
+</body>
+</html>
